@@ -36,41 +36,63 @@ export default class CustomModal extends Component {
 
     return (
       <Modal isOpen={true} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Todo Item</ModalHeader>
+        <ModalHeader toggle={toggle}>Power Analysis</ModalHeader>
         <ModalBody>
           <Form>
             <FormGroup>
-              <Label for="todo-title">Title</Label>
+              <Label for="todo-title">Base Conversion</Label>
               <Input
                 type="text"
-                id="todo-title"
-                name="title"
+                id="power_analysis-base_conversion"
+                name="base_conversion"
                 value={this.state.activeItem.title}
                 onChange={this.handleChange}
-                placeholder="Enter Todo Title"
+                placeholder="Enter Base Conversion"
               />
             </FormGroup>
             <FormGroup>
-              <Label for="todo-description">Description</Label>
+              <Label for="todo-description">A Grade Proportion</Label>
               <Input
                 type="text"
-                id="todo-description"
-                name="description"
+                id="power_analysis-a_grade_proportion"
+                name="a_grade_proportion"
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
-                placeholder="Enter Todo description"
+                placeholder="Enter A Grade Proportion"
               />
             </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input
-                  type="checkbox"
-                  name="completed"
-                  checked={this.state.activeItem.completed}
-                  onChange={this.handleChange}
-                />
-                Completed
-              </Label>
+            <FormGroup>
+              <Label for="todo-description">Uplift</Label>
+              <Input
+                type="text"
+                id="power_analysis-uplift"
+                name="uplift"
+                value={this.state.activeItem.description}
+                onChange={this.handleChange}
+                placeholder="Enter uplift"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="todo-description">Days Max</Label>
+              <Input
+                type="text"
+                id="power_analysis-days_max"
+                name="days_max"
+                value={this.state.activeItem.description}
+                onChange={this.handleChange}
+                placeholder="Enter days max"
+              />
+            </FormGroup>
+            <FormGroup>
+              <Label for="todo-description">Calls Per Day</Label>
+              <Input
+                type="text"
+                id="power_analysis-calls_per_day"
+                name="calls_per_day"
+                value={this.state.activeItem.description}
+                onChange={this.handleChange}
+                placeholder="Enter Calls per Day"
+              />
             </FormGroup>
           </Form>
         </ModalBody>

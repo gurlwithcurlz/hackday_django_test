@@ -23,7 +23,7 @@ class App extends Component {
 
   refreshList = () => {
     axios
-      .get("/api/power_analysis/")
+      .get("/api/todos/")
       .then((res) => this.setState({ todoList: res.data }))
       .catch((err) => console.log(err));
   };
@@ -34,26 +34,26 @@ class App extends Component {
 
   handleSubmit = (item) => {
     this.toggle();
-    console.log(item)
+
     if (item.id) {
       axios
-        .put(`/api/power_analysis/${item.id}/`, item)
+        .put(`/api/todos/${item.id}/`, item)
         .then((res) => this.refreshList());
       return;
     }
     axios
-      .post("/api/power_analysis/", item)
+      .post("/api/todos/", item)
       .then((res) => this.refreshList());
   };
 
   handleDelete = (item) => {
     axios
-      .delete(`/api/power_analysis/${item.id}/`)
+      .delete(`/api/todos/${item.id}/`)
       .then((res) => this.refreshList());
   };
 
   createItem = () => {
-    const item = { base_conversion: "", a_grade_proportion: "", uplift: "" , days_max: "", calls_per_day: ""};
+    const item = { title: "", description: "", completed: false };
 
     this.setState({ activeItem: item, modal: !this.state.modal });
   };

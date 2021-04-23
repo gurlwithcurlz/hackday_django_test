@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from todo import views
+from power_analysis import views as power_views
 
 router = routers.DefaultRouter()
 router.register(r'todos', views.TodoView, 'todo')
+router.register(r'power_analysis', power_views.PowerAnalysisView, 'power_analysis')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
