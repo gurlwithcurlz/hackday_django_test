@@ -29,8 +29,8 @@ class PowerAnalysis(models.Model):
         p_sig = [0.80, 0.85, 0.90, 0.95, 0.99]
         for days in days_list:
             t, p = ttest_ind_from_stats(
-                avg_conversion, binomial_std(n_non_A, avg_conversion), days * n_non_A,
-                A_conversion, binomial_std(n_A, A_conversion), days * n_A,
+                avg_conversion, binomial_std(n_non_A, avg_conversion), days ,
+                A_conversion, binomial_std(n_A, A_conversion), days,
                 equal_var=False
             )
 
@@ -40,4 +40,4 @@ class PowerAnalysis(models.Model):
         first_day = np.array(days_list)[np.where(np.array(confidence)>=0.95)][0]
         nAs_firstday = np.array(nAs_sig)[np.where(np.array(confidence)>=0.95)][0]
 
-        return first_day, nAs_firstday
+        return first_day, np.round(nAs_firstday)
