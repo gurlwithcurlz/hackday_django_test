@@ -47,7 +47,7 @@ export default class CustomModal extends Component {
                 name="base_conversion"
                 value={this.state.activeItem.title}
                 onChange={this.handleChange}
-                placeholder="Enter Base Conversion"
+                placeholder="Convertion rate of leads to opportunity as a decimal"
               />
             </FormGroup>
             <FormGroup>
@@ -58,7 +58,7 @@ export default class CustomModal extends Component {
                 name="a_grade_proportion"
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
-                placeholder="Enter A Grade Proportion"
+                placeholder="Proportion of A grade leads as a decimal"
               />
             </FormGroup>
             <FormGroup>
@@ -69,7 +69,7 @@ export default class CustomModal extends Component {
                 name="uplift"
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
-                placeholder="Enter uplift"
+                placeholder="Uplift in conversion rate as a decimal"
               />
             </FormGroup>
             <FormGroup>
@@ -78,9 +78,9 @@ export default class CustomModal extends Component {
                 type="text"
                 id="power_analysis-days_max"
                 name="days_max"
-                value={this.state.activeItem.description}
+                value="1000"
                 onChange={this.handleChange}
-                placeholder="Enter days max"
+                placeholder="1000"
               />
             </FormGroup>
             <FormGroup>
@@ -91,7 +91,7 @@ export default class CustomModal extends Component {
                 name="calls_per_day"
                 value={this.state.activeItem.description}
                 onChange={this.handleChange}
-                placeholder="Enter Calls per Day"
+                placeholder="Enter Calls per Day as a whole number"
               />
             </FormGroup>
           </Form>
@@ -101,7 +101,7 @@ export default class CustomModal extends Component {
             color="success"
             onClick={() => onSave(this.state.activeItem)}
           >
-            Save
+            Calculate
           </Button>
         </ModalFooter>
       </Modal>

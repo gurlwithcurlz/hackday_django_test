@@ -129,22 +129,19 @@ class App extends Component {
   render() {
     return (
       <main className="container">
-        <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
+        <h1 className="text-danger text-uppercase text-center my-4">GI Power analysis</h1>
+        <p>Here you can caluclate how many days it would take you to achieve the uplift you need</p>
         <div className="row">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
               <div className="mb-4">
                 <button
-                  className="btn btn-primary"
+                  className="btn btn-danger"
                   onClick={this.createItem}
                 >
-                  Add task
+                  Calculate Power Analysis!
                 </button>
               </div>
-              {this.renderTabList()}
-              <ul className="list-group list-group-flush border-top-0">
-                {this.renderItems()}
-              </ul>
             </div>
           </div>
         </div>

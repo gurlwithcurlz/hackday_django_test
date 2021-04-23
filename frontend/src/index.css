@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+p{
+  text-align: center;
+}
+
+button{
+  alignment: center;
+  position: center;
+  text-align: center;
+}
