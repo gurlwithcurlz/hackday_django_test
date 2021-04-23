@@ -37,4 +37,7 @@ class PowerAnalysis(models.Model):
             confidence.append(1 - p)
             nAs_sig.append(n_A * days)
 
-        return confidence
+        first_day = np.array(days_list)[np.where(np.array(confidence)>=0.95)][0]
+        nAs_firstday = np.array(nAs_sig)[np.where(np.array(confidence)>=0.95)][0]
+
+        return first_day, nAs_firstday

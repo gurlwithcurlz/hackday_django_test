@@ -11,4 +11,5 @@ class PowerAnalysisView(viewsets.ModelViewSet):
     last = queryset.last()
     print('Hi')
     print(last.calculate_power_analysis())
+    print('hello again')
     # queryset.calculate_power_analysis()
